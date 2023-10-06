@@ -3,16 +3,21 @@
     <q-header class="bg-teal-6 text-white" reveal>
       <q-toolbar>
         <q-toolbar-title> Title </q-toolbar-title>
-        <q-spacer />
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+        <q-space />
+        <q-btn dense flat class="lt-md" round icon="menu" @click="toggleLeftDrawer" />
+        <q-tabs class="gt-md">
+          <q-tab v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
+            {{ locale.name }}
+          </q-tab>
+        </q-tabs>
       </q-toolbar>
     </q-header>
 
-    <q-drawer class="gt-md text-center bg-white" show-if-above v-model="rightDrawerOpen" side="right" bordered>
+    <q-drawer class="lt-md text-center bg-white" v-model="rightDrawerOpen" side="right">
       <q-list>
-        <NuxtLink v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">
-          <q-item>{{ locale.name }}</q-item></NuxtLink
-        >
+        <q-item clickable v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
+          {{ locale.name }}
+        </q-item>
       </q-list>
     </q-drawer>
     <q-page-container>
@@ -31,7 +36,6 @@ const toggleLeftDrawer = () => {
 };
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
-const availableLocales = computed(() => {
-  return locales.value.filter((i) => i.code !== locale.value);
-});
+console.log(locales)
+
 </script>

@@ -18,12 +18,12 @@ export default defineNuxtConfig({
       },
       {
         code: 'tw',
-        name: 'chinese',
+        name: 'Chinese',
         file: './lang/tw.json'
       },
       {
         code: 'jp',
-        name: 'japanese',
+        name: 'Japanese',
         file: './lang/jp.json'
       }
     ],
