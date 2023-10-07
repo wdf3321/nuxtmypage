@@ -6,9 +6,9 @@
         <q-space />
         <q-btn dense flat class="lt-md" round icon="menu" @click="toggleLeftDrawer" />
         <q-tabs class="gt-md">
-          <q-tab v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
+          <q-route-tab v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
             {{ locale.name }}
-          </q-tab>
+          </q-route-tab>
         </q-tabs>
       </q-toolbar>
     </q-header>

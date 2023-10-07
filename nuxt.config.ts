@@ -9,25 +9,25 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    vueI18n: './lang/nuxt-i18n.ts',
+    vueI18n: '~/lang/nuxt-i18n.ts',
     locales: [
       {
         code: 'en',
         name: 'English',
-        file: './lang/en.json'
+        file: 'lang/en.json'
       },
       {
         code: 'tw',
         name: 'Chinese',
-        file: './lang/tw.json'
+        file: 'lang/tw.json'
       },
       {
         code: 'jp',
         name: 'Japanese',
-        file: './lang/jp.json'
+        file: 'lang/jp.json'
       }
     ],
-    defaultLocale: 'zh',
+    defaultLocale: 'tw',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
