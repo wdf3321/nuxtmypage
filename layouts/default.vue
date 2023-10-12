@@ -1,9 +1,10 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="bg-white text-black" reveal>
+    <q-header class="text-black bg-secondary" reveal>
       <q-toolbar>
         <q-toolbar-title> Title </q-toolbar-title>
         <q-space />
+        <q-btn flat round icon="brightness_4" @click="toggleDarkMode" />
         <q-btn dense flat class="lt-md" round icon="menu" @click="toggleLeftDrawer" />
         <q-tabs class="gt-md">
           <q-route-tab v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
@@ -28,14 +29,20 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useQuasar } from "quasar";
 
+const $q = useQuasar();
 const rightDrawerOpen = ref(false);
-
+const isDark = ref($q.dark.isActive);
 const toggleLeftDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 };
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
-console.log(locales)
+console.log(locales);
+function toggleDarkMode() {
+  isDark.value = !isDark.value;
+  $q.dark.set(isDark.value);
+}
 
 </script>

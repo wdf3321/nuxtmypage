@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     extras: {
       font: "roboto-font",
     },
+    config:{dark:"auto"}
   },
   i18n: {
     vueI18n: '~/lang/nuxt-i18n.ts',
