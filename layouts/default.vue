@@ -37,6 +37,7 @@ const isDark = ref($q.dark.isActive);
 const toggleLeftDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value;
 };
+
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 console.log(locales);

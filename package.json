@@ -20,7 +20,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "@quasar/extras": "^1.16.7",
+    "pinia": "^2.1.7",
     "quasar": "^2.12.7"
   }
 }
