@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  nuxtmypage:
+    container_name: nuxtmypage
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

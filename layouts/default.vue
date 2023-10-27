@@ -1,10 +1,10 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="text-black bg-secondary" reveal>
+    <q-header class="bg-dark" reveal>
       <q-toolbar>
         <q-toolbar-title> Title </q-toolbar-title>
         <q-space />
-        <q-btn flat round icon="brightness_4" @click="toggleDarkMode" />
+        <q-btn flat round icon="brightness_4" color="inherit" @click="toggleDarkMode" />
         <q-btn dense flat class="lt-md" round icon="menu" @click="toggleLeftDrawer" />
         <q-tabs class="gt-md">
           <q-route-tab v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)">
