@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     'quasar/css', 
     './assets/css/main.scss'
     // If config.brand is used
+    //
     // ...
   ],
   devtools: { enabled: true },
