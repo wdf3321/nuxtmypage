@@ -1,10 +1,10 @@
-FROM node:16-alpine as builder
+FROM node:18-alpine as builder
 
 # create work directory in app folder
 WORKDIR /app
 
 # install required packages for node image
-RUN apk --no-cache add openssh g++ make python3 git
+# RUN apk --no-cache add openssh g++ make python3 git
 
 # copy over package.json files
 COPY package.json /app/
@@ -20,7 +20,7 @@ ADD . /app
 RUN yarn build
 
 # start final image
-FROM node:16-alpine
+FROM node:18-alpine
 
 
 WORKDIR /app
