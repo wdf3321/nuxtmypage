@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     // ...
   ],
   devtools: { enabled: true },
-  modules: ["nuxt-quasar-ui", "@nuxtjs/i18n", "@pinia/nuxt",'@hypernym/nuxt-anime' ],
+  modules: ["nuxt-quasar-ui", "@nuxtjs/i18n", "@pinia/nuxt",'@hypernym/nuxt-anime','@pinia-plugin-persistedstate/nuxt' ],
   pinia: {
     storeDirs: ["./stores/**"],
   },

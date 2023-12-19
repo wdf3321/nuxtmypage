@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
-export const useAddressStore = defineStore({
-  id: "address",
+export const useAddressStore = defineStore('address',{
+
   state: () => ({
     state: [{value:1,label:"台北市"}, {value:2,label:"新北市"}],
     pricelist:[
@@ -38,4 +38,5 @@ export const useAddressStore = defineStore({
     ]
   }),
   actions: {},
+  persist: true,
 });
