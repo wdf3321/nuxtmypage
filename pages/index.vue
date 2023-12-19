@@ -2,7 +2,7 @@
 <div class="row w-100 ">
   <div class="col-xs-12 col-md-12 image-container column items-center first">
     <div class="col-4"></div>
-    <div class="text-h2 col-2 text-center">Welcome To <br> My Portfolio</div>
+    <div class="text-h2 col-2 text-center">{{t('welcome')  }}</div>
     <AnimatedToggle class="arrow col text-center q-mt-xl"/>
 
   </div>
